@@ -9,7 +9,7 @@ This blog is a place to dump my ideas and stuff I find while working, to remembe
 
 
 ### More Information
-If you would like to know more, you can always hit me up by email. Also, take a look at my portfolio [here](www.santiagopportfolio.xyz)! There are a bunch of interesting stuff there
+If you would like to know more, you can always hit me up by email. Also, take a look at my portfolio [here](https://www.santiagopportfolio.xyz)! There are a bunch of interesting stuff there
 
 ### Contact me
 
