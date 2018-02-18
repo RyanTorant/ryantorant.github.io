@@ -4,12 +4,13 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
+I'm a Graphic Programmer, with a Computer Analyst degree (and currently one year away from my Computer Engineering degree), but I've been coding since I was 15 as I wanted to enter a videogame contest at the time.
+This blog is a place to dump my ideas and stuff I find while working, to remember them later and maybe help someone out in the process :D.
+
 
 ### More Information
-
-A place to include any other types of information that you'd like to include about yourself.
+If you would like to know more, you can always hit me up by email. Also, take a look at my portfolio [here](santiagopportfolio.xyz)! There are a bunch of interesting stuff there
 
 ### Contact me
 
-[email@domain.com](mailto:email@domain.com)
+[pachesantiago@gmail.com](mailto:pachesantiago@gmail.com)
