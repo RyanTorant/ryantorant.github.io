@@ -1,7 +1,6 @@
 ---
 layout: page
 title: About
-permalink: /about/
 ---
 
 I'm a Graphic Programmer, with a Computer Analyst degree (and currently one year away from my Computer Engineering degree), but I've been coding since I was 15 as I wanted to enter a videogame contest at the time.
