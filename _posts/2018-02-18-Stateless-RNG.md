@@ -5,7 +5,7 @@ title: The search for simple, thread-safe PRNG
 
 # Stateless (Pseudo) Random Number Generation. Wait, what? Stateless?
 While that headline might seem like gibberish, bare with me for a moment. It'll make sense.
-I'm going to assume here that you know what I'm talking about when I say PRNG or LCG, because explaining all that would be a post on its own :D (though [Wikipedia](https://en.wikipedia.org/wiki/Pseudorandom_number_generator) it's a good place to start)
+I'm going to assume here that you know what I'm talking about when I say PRNG or LCG, because explaining all that would be a post on its own :D (though [Wikipedia](https://en.wikipedia.org/wiki/Pseudorandom_number_generator) is a good place to start)
 
 Now, most PRNGs are basically a recurrent sequence that applies a more or less complex transformation to the previous value (or values) to output the new value, therefore it needs to store state, and it also needs a starting value. Thing is, that can be problematic if you are working on a multi-threaded environment. There are problems with how to update the state, and how to find seeds (the starting values) that are different enough between threads so that the generated numbers are of good quality.  
 For example, LCGs don't behave well when going wide, that is, using a lot of consecutive seeds. Below it's 10.000 numbers generated with a 32 bits LCG (the coefficients were taken from [here](https://en.wikipedia.org/wiki/Linear_congruential_generator#Parameters_in_common_use)) 
