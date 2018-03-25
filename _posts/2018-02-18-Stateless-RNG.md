@@ -65,7 +65,7 @@ For comparison, let's use a standard 32 bit LCG, and then different combinations
 | r\*r\*(r\*a + b)  (high bits)) |      74%         | 
 | [MT19937](http://www.cplusplus.com/reference/random/mt19937/)|      98%        | 
 
-Clearly, you shouldn't be using this for cryptographic applications, even the best case only passes 74% of the tests, but it does tells us that the r\*r\*r version is about as good as an LCG, and taking the high bits (just a right shift) makes it much better. While this talks about quality, there's another important factor missing and that's performance. Let's check that now by measuring how many millions of numbers per second we can generate. All the tests were done on an Xeon E5-2683v3, with 32GB of RAM and running Windows 10.
+Clearly, you shouldn't be using this for cryptographic applications, even the best case only passes 74% of the tests, but it does tells us that the r\*r\*r version is about as good as an LCG, and taking the high bits (just a right shift) makes it much better. While this talks about quality, there's another important factor missing and that's performance. Let's check that now by measuring how many millions of numbers per second we can generate. All the tests were done on a Xeon E5-2683v3, with 32GB of RAM and running Windows 10.
 
 | Generator                  |  M/s
 | -------------------------- | :--------------: |
