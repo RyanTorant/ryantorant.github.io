@@ -23,10 +23,14 @@
 
       <section>
         <div id="title">
-          <h1>{{ site.title | default: 404 Name not found }}</h1>
+          <h1>{{ site.title | default: "Random posts by Santiago Pacheco"}}</h1>
           <p>{{ site.description | default: site.github.project_tagline }}</p>
           <hr>
           <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
+          <nav>
+            <a href="{{ site.baseurl }}/">Blog</a>
+            <a href="{{ site.baseurl }}/about">About</a>
+          </nav>
         </div>
 
         {{ content }}
