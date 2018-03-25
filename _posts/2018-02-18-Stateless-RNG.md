@@ -1,6 +1,6 @@
 ---
 layout: post
-title: The search for a (kinda) stateless RNG
+title: The search for simple, thread-safe PRNG
 ---
 
 # Stateless (Pseudo) Random Number Generation. Wait, what? Stateless?
@@ -43,7 +43,7 @@ return rdtsc() * rdtsc() * rdtsc();
 ```
 And just like that, our awful 200x200 image becomes this nicely random picture
 
-![rdtsc_matrix](../images/postsImages/2018-02-18rng/rdtscMatrix.png)
+![rdtsc_matrix](../images/postsImages/2018-02-18/rdtscMatrix.png)
 
 Also, using threads to create the different columns increases context switch, therefore forcing the OS to get more in the way, and ultimately adding more randomness! 
 
