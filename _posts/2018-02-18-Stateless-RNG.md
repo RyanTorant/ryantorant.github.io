@@ -58,11 +58,11 @@ For comparison, let's use a standard 32 bit LCG, and then different combinations
 | LCG                        |        49%       |
 | r\*r                       |      23%         |
 | r\*r\*r                    |      36%         |
-| r*a + b                    |      16%         |
+| r\*a + b                    |      16%         |
 | r\*r (high bits)           |     32%        |
 | r\*r\*r  (high bits)       |      68%         |
-| r*a + b  (high bits)       |      24%         |
-| r*r*(r*a + b)  (high bits)) |      74%         | 
+| r\*a + b  (high bits)       |      24%         |
+| r\*r\*(r\*a + b)  (high bits)) |      74%         | 
 | [MT19937](http://www.cplusplus.com/reference/random/mt19937/)|      98%        | 
 
 Clearly, you shouldn't be using this for cryptographic applications, even the best case only passes 74% of the tests, but it does tells us that the r\*r\*r version is about as good as an LCG, and taking the high bits (just a right shift) makes it much better. While this talks about quality, there's another important factor missing and that's performance. Let's check that now by measuring how many millions of numbers per second we can generate 
@@ -72,7 +72,7 @@ Clearly, you shouldn't be using this for cryptographic applications, even the be
 | LCG                        |        612       |
 | r\*r                       |      51         |
 | r\*r\*r                    |      34       |
-| r*a + b                    |      103         |
+| r\*a + b                    |      103         |
 | r\*r (high bits)           |      51      |
 | r\*r\*r  (high bits)       |      34       |
 | r\*a + b  (high bits)       |      103        |
