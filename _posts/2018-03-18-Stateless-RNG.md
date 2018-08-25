@@ -65,7 +65,7 @@ For comparison, let's use a standard 32 bit LCG, and then different combinations
 | r\*r\*(r\*a + b)  (high bits)) |      74%         | 
 | [MT19937](http://www.cplusplus.com/reference/random/mt19937/)|      98%        | 
 
-Clearly, you shouldn't be using this for cryptographic applications, even the best case only passes 74% of the tests, but it does tells us that the r\*r\*r version is about as good as an LCG, and taking the high bits (just a right shift) makes it much better. While this talks about quality, there's another important factor missing and that's performance. Let's check that now by measuring how many millions of numbers per second we can generate. All the tests were done on a Xeon E5-2683v3, with 32GB of RAM and running Windows 10.
+Clearly, you shouldn't be using this for cryptographic applications, even the best case only passes 74% of the tests, but it does tells us that the r\*r\*r version is about as good as an LCG, and taking the high bits (just a right shift) makes it much better. While this talks about quality, there's another important factor missing and that's performance. Let's check that now by measuring how many millions of numbers per second we can generate. All the tests were done on a Xeon E5-2683v3, with 32GB of RAM and running Windows 10. I used Visual Studio 2017 and compiled with all optimizations enabled on x64.
 
 | Generator                  |  M/s
 | -------------------------- | :--------------: |
@@ -80,5 +80,5 @@ Clearly, you shouldn't be using this for cryptographic applications, even the be
 | [MT19937](http://www.cplusplus.com/reference/random/mt19937/)|    163       | 
 
 ## Wrapping it up
-Now, with all the results on the table, we can see that if you are doing anything that requires high quality random numbers, or just want the fastest possible generator, the **rdtsc** thing it's not the best option, but it does solve the concurrency problems, and the *r\*r\*r* version taking the high bits it's usually fast enough, while providing even better quality than an LCG. Overall, I think it's an interesting trick to keep in mind, specially as it solves all those pesky concurrency problems. 
+Now, with all the results on the table, we can see that if you are doing anything that requires high quality random numbers, or just want the fastest possible generator, the **rdtsc** thing it's not the best option. On the other hand, it does solve the concurrency problems, and the *r\*r\*r* version taking the high bits it's usually fast enough, while providing even better quality than an LCG. Overall, I think it's an interesting trick to keep in mind, specially as it solves all those pesky concurrency problems. 
 If you have anything to say, feel free to leave a comment below, I'll try to answer it as soon as possible
