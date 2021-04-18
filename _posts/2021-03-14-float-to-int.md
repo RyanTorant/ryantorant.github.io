@@ -4,7 +4,6 @@ title: Float to int, the fast way
 ---
 
 # From float to int (when you know it's an int)
-
 As a fun crazy project I've been designing and implementing a raytracing GPU (on an FPGA). While I'll probably do an in depth series of posts soon, for now I just wanted to share a cool snippet that could be useful to someone.
 I wanted a relatively generic code design for my RT GPU so I went with programable shader cores, but to keep it realistic, they only process 32 bits floats. There's no hardware for integer operations because you don't really need them on graphics, except... when you want to read memory.
 
