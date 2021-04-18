@@ -1,6 +1,6 @@
 ---
 layout: post
-title: From float to int (when you know it's an int)
+title: Float to int, the fast way
 ---
 
 # From float to int (when you know it's an int)
