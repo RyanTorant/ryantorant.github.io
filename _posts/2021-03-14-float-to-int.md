@@ -1,3 +1,8 @@
+---
+layout: post
+title: From float to int (when you know it's an int)
+---
+
 # From float to int (when you know it's an int)
 
 As a fun crazy project I've been designing and implementing a raytracing GPU (on an FPGA). While I'll probably do an in depth series of posts soon, for now I just wanted to share a cool snippet that could be useful to someone.
